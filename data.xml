@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="center">-122.34374999999999,6.315298538330033,1</Parameter>
+  <Parameter name="description"><![CDATA[Vectorized peak ground velocity (pgv) data from usgs
+]]></Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"earthquake","description":"","minzoom":0,"maxzoom":22,"fields":{"gid":"Number","area":"Number","perimeter":"Number","pgapol_":"Number","pgapol_id":"Number","grid_code":"Number","value":"Number"}}]}]]></Parameter>
+  <Parameter name="maxzoom">9</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[Earthquakes]]></Parameter>
+</Parameters>
+
+
+<Layer name="earthquake"
+  buffer-size="0"
+  minzoom="100"
+  maxzoom="1000000000"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[quake]]></Parameter>
+       <Parameter name="extent"><![CDATA[-89.04,-64.2254,158.6257,14.5313]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[pgv]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
